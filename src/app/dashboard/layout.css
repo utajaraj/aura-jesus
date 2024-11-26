@@ -1,0 +1,157 @@
+.dashboard-layout {
+    display: flex;
+    height: 100vh;
+}
+
+.navigation {
+    padding: 26px 0;
+    display: flex;
+    z-index: 3;
+    justify-content: space-between;
+    width: 104px;
+    background-color: var(--dark-background);
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    align-items: center;
+}
+
+
+.image-icons {
+    color: #fff;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.panel {
+    width: calc(100vw - 104px);
+    margin-left: 104px;
+    background: #FFF;
+}
+
+.hero {
+    background: linear-gradient(-135deg, #b552ee, #57208a, #a223d5, #4423d5);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    padding-top: 32px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero>* {
+    color: #FFF;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 32px;
+    font-family: var(--abyssinica);
+}
+
+.hero-subtitle {
+    font-family: var(--abyssinica);
+    font-size: 24px;
+}
+
+.hero>p {
+    font-size: 16px;
+    font-family: var(--abyssinica);
+}
+
+.hero-cards {
+    padding: 32px 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 32px;
+}
+
+.hero-card {
+    background-color: #FFF;
+    color: #000;
+    height: 180px;
+    border-radius: 8px;
+    width: 184px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.hero-card>h3 {
+    font-size: 18px;
+    font-family: var(--abyssinica);
+}
+
+@media only screen and (max-width:990px) {
+    .hero {
+        padding: 0 32px;
+        padding-top: 32px;
+    }
+
+    .hero-cards {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero-card {
+        width: 100%
+    }
+
+    .hero-cards>a {
+        width: 100%;
+    }
+}
+
+.waiting {
+    padding-top: 105px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader.black,
+.loader.black::before {
+    border-color: #000;
+    width: 40px;
+    height: 40px;
+}
+
+.waiting>p {
+    font-size: 22px;
+    font-family: var(--sansation);
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+@media only screen and (max-width:780px) {
+    .navigation{
+        display: none;
+    }
+    .panel{
+        width: 100%;
+        margin-left: 0;
+    }
+}

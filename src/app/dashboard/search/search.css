@@ -1,0 +1,130 @@
+.search-title {
+    color: var(--accent1);
+    font-size: 22px;
+    font-weight: bold;
+    font-family: var(--sansation);
+}
+
+.search-subtitle {
+    font-size: 16px;
+    text-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px;
+    font-family: var(--sansation);
+}
+
+.search-input {
+    height: 44px;
+    border-radius: 4px;
+    background-color: #FFF;
+}
+
+.search-option {
+    background-color: #FFF;
+}
+
+.searcher {
+    max-width: 498px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.searcher>* {
+    width: 100%;
+}
+
+.popular-stocks {
+    background-color: var(--light-background);
+    display: flex;
+    max-width: 438px;
+    flex-wrap: wrap;
+    padding: 16px;
+    gap: 16px;
+}
+
+.stock-pill {
+    background-color: #FFF;
+    border-radius: 4px;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding: 0 15px;
+    gap: 10px;
+    width: fit-content;
+    border: 1px solid var(--border);
+}
+
+.handle {
+    font-weight: bold;
+    width: max-content;
+    font-family: var(--sansation);
+}
+
+.commercialName {
+    font-family: var(--sansation);
+}
+
+.commercialName,
+.handle {
+    font-size: 16px;
+}
+
+.amount-saved {
+    width: 100%;
+}
+
+.search-panel {
+    display: flex;
+    justify-content: space-between;
+    padding: 110px 232px;
+}
+
+.search-panel>img {
+    padding-left: 10px;
+}
+
+.select-handle,
+.select-name {
+    font-size: 16px;
+    font-family: var(--roboto);
+}
+
+.select-handle {
+    font-weight: 900;
+}
+
+.select-name {
+    font-weight: 400;
+}
+
+.stock-option {
+    display: flex;
+    gap: 10px;
+}
+
+
+@media only screen and (max-width:1270px) {
+    .search-panel {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+@media only screen and (max-width:870px) {
+    .search-panel {
+        padding: 55px 116px;
+        padding-top: 132px;
+    }
+}
+
+@media only screen and (max-width:639px) {
+    .search-panel {
+        padding: 27.5px 59px;
+        padding-top: 132px;
+    }
+
+    .stock-pill {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+}

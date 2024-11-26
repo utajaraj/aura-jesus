@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --dark: #101723;
+  --light-background: #F9F5FD;
+  --dark-background: #1B093C;
+  --dark-accent: #2D3648;
+  --accent1: #6869AC;
+  --accent2: #8886BE;
+  --accent3: #E8E5F9;
+  --grey1: #3E4551;
+  --border: #CFCFD4;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.animated-gradient {
+  background: linear-gradient(230deg, #360768, #7a39ef, #8451c3, #2d065c, #c575ff);
+  background-size: 1000% 1000%;
+  -webkit-animation: AnimationName 13s ease infinite;
+  -moz-animation: AnimationName 13s ease infinite;
+  -o-animation: AnimationName 13s ease infinite;
+  animation: AnimationName 13s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 29% 0%
+  }
+
+  50% {
+    background-position: 72% 100%
+  }
+
+  100% {
+    background-position: 29% 0%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 29% 0%
+  }
+
+  50% {
+    background-position: 72% 100%
+  }
+
+  100% {
+    background-position: 29% 0%
+  }
+}
+
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 29% 0%
+  }
+
+  50% {
+    background-position: 72% 100%
+  }
+
+  100% {
+    background-position: 29% 0%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 29% 0%
+  }
+
+  50% {
+    background-position: 72% 100%
+  }
+
+  100% {
+    background-position: 29% 0%
+  }
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite
+}
+
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 2.5px solid #FFF;
+  animation: prixClipFix 2s linear infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
+@keyframes prixClipFix {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+  }
+
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+  }
+
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+  }
+
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+  }
+
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+  }
+}
+
+.ant-select-item-option {
+  height: 35px;
+}
+
+.ant-select-item-option-active,
+.ant-select-item-option-selected {
+  background-color: var(--accent3) !important;
+}
+
+.ant-select-selector {
+  border: 1px solid #CFCFD4;
+}
+
+.ant-select-outlined:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer):hover .ant-select-selector {
+  border-color: #8886BE;
+}

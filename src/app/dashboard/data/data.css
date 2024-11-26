@@ -1,0 +1,135 @@
+/* .ant-form-item-required {
+    flex-direction: row-reverse;
+    gap: 5px;
+} */
+
+/* .ant-form-item-required:after {
+    margin-inline-end: 0;
+    display: none;
+} */
+
+.ant-form-item {
+    font-family: var(--roboto);
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.ant-input,
+.ant-select {
+    height: 44px;
+}
+
+.upload-form{
+    padding: 24px;
+    border-radius: 4px;
+    background-color: #FFF;
+    box-shadow: 0px 3px 4px #00000040;
+}
+.upload-header>h1 {
+    font-size: 22px;
+    font-family: var(--sansation);
+    margin-bottom: 29px;
+}
+
+.ant-form {
+    gap: 29px;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-panel {
+    position: absolute;
+    border-radius: 4px;
+    border: 1px solid #CFCFD4;
+    top: 120px;
+    box-shadow: 1px 0px 4;
+    background-color: #FFF;
+    width: calc(100% - 104px);
+    left: 104px;
+    padding: 32px;
+    background: none;
+    border: none;
+    width: calc(100% - 104px);
+}
+
+.ant-checkbox-group>* {
+    width: 50%;
+}
+
+.check-group {
+    max-width: 462px;
+}
+
+.check-group>* {
+    padding-bottom: 10px !important;
+    padding-right: 10px !important;
+}
+
+/* .ant-checkbox, */
+.ant-checkbox-input,
+.ant-checkbox-inner {
+    border: 1px solid #A2A3A8;
+    background-color: #FCFCFC;
+    border-radius: 4px;
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.ant-checkbox-inner::after {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.form-buttons>:nth-child(1) {
+    border: 1px solid #787C84;
+}
+
+.form-buttons>*,
+.submit-button {
+    border-radius: 4px !important;
+    width: 160px !important;
+    height: 36px !important;
+}
+
+.submit-button {
+    background-color: #E8E5F9 !important;
+    border: 1px solid #AEADD5 !important;
+    color: #3E4551;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.submit-button:hover {
+    color: #FFF!important;
+    background-color: var(--accent1) !important;
+}
+
+.my-check-item{
+    width: 50%;
+}
+@media only screen and (max-width:854px) {
+    .form-buttons>*,
+    .submit-button {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .my-check-item{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:780px){
+    .data-panel{
+        left: 0;
+        width: 100%;
+    }
+}
